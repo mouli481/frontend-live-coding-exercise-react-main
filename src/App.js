@@ -40,7 +40,8 @@ const App = () => {
   return (
     <div className="main__wrap">
       <main className="container">
-        <h1>Programming Language Questionnaire</h1>
+        <h1>Todo</h1>
+        <ScoreDisplay score={score} averageRating={averageRating} />
         {Object.keys(QUESTIONS).map((key) => (
           <Question
             key={key}
@@ -50,7 +51,7 @@ const App = () => {
           />
         ))}
         <button onClick={handleSubmit}>Submit</button>
-        <ScoreDisplay score={score} averageRating={averageRating} />
+        
       </main>
     </div>
   );
